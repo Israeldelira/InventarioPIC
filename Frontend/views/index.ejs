@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>INVENTARIO-HOME</title>
+
+    <!-- BOOTSTRAP 4 CDN-->
+    <style>
+        #wrapper {
+            overflow-x: hidden;
+        }
+        
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
+        
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+        
+        #sidebar-wrapper .list-group {
+            width: 15rem;
+        }
+        
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+        
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+        
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+    </style>
+
+    <%- include("shared/head") %>
+</head>
+
+<body>
+    <%- include("shared/menu") %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            Quote
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>CARD PARA STOCK GENERAL.</p>
+                                <footer class="blockquote-footer">TEXTO <cite title="Source Title">TEXTO TITULO</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+                <div class="col-sm">
+                    One of three columns
+                </div>
+            </div>
+        </div>
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+
+</body>
+
+</html>
